@@ -1,3 +1,22 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+	<h2>All Notices</h2>
+
+<p class="control">
+  <input class="input" type="text" placeholder="Search notices">
+</p>
+
+<div class="columns">
+	<div class="column">id</div>
+	<div class="column">title</div>
+	<div class="column">Description</div>
+	<div class="column">city</div>
+	<div class="column">Date</div>
+</div>
+<div class="columns" *ngFor="let notice of notices">
+	<div class="column">{{notice.id}}</div>
+	<div class="column">{{notice.title}}</div>
+	<div class="column">{{notice.description}}</div>
+	<div class="column">{{notice.place}}</div>
+	<div class="column">{{notice.date}}</div>
+</div>
+</div>
